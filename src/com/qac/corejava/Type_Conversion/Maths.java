@@ -10,7 +10,6 @@ public class Maths {
 	 
 	 System.out.println("Conversion of int to byte");
 	 b =(byte)i;
-	 System.out.println(i);
-	 }
+	 System.out.println(i);	 }
 
 }
