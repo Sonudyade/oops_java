@@ -30,6 +30,16 @@ public static void main(String[] args) {
 		
 	     String response=dao. deleteByBrandName("boat");
 	     System.out.println(response);
+	     
+	     String display=dao.deleteByColor("Black");
+	     System.out.println(display);
+	     
+	     String print =dao.deleteDisplay("LED");
+	     System.out.println(print);
+	     
+	     
+	     
+	    
 	}
 
 

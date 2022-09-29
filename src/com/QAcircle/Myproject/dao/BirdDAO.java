@@ -20,4 +20,22 @@ private ParrotBirdDTO[] parrotbirddto= new ParrotBirdDTO[10];
 
 
 }
+	public String deletedByName(String name) {
+		if(parrotbirddto[0]!=null&& parrotbirddto[0].getName().equals(name)) {
+		}
+			parrotbirddto[0] = null;
+			return"Deleted"+ name;
+	}
+	public String deleteByStay(String stay) {
+	if(parrotbirddto[0]!=null&& parrotbirddto[0].getStay().equals(stay)) {
+	}
+		parrotbirddto[0] = null;
+		return"Deleted"+ stay;
+	
+	
 }
+}
+
+	
+	
+

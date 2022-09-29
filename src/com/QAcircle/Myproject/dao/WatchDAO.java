@@ -18,5 +18,26 @@ private SmartWatchDTO[]smartWatches =new SmartWatchDTO[10];
 		}
          return "brandName"+brandName +"not present";
 	}
+	
+	public String deleteByColor(String color) {
+		if(smartWatches[0]!=null&&smartWatches[0].getColor().equals(color)) {
+			smartWatches[0]=null;
+			return"Deleted"+ color;
+		}
+	
+	return "color"+color +"not present";
+		
+	}
+	
+	public String deleteDisplay(String Display) {
+		if(smartWatches[0]!=null&&smartWatches[0].getDisplay().equals(Display)) {
+				smartWatches[0]=null;
+				return"Deleted"+ Display;
+		
+	}
+	
 
+
+		return "display"+Display +"not present";
+	}
 }

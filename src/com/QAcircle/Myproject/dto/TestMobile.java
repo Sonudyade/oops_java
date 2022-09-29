@@ -27,6 +27,17 @@ public static void main(String[] args) {
 		String response= dao.deleteByBrandName("Vivo");
 		System.out.println(response);
 		
+		String show = dao.deleteByColor("Black");
+		System.out.println(show);
+		
+		String print = dao.deleteByPrice(50000);
+		System.out.println(print);
+		
+		String display=dao.deleteByFeatures(args);
+		System.out.println(display);
+		
+	
+		
 
 		
 		
