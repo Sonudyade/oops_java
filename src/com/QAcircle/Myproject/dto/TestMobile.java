@@ -23,6 +23,7 @@ public static void main(String[] args) {
 		
 		MobileDAO dao = new MobileDAO();
 		dao.save(mobile1);
+	
 		
 		String response= dao.deleteByBrandName("Vivo");
 		System.out.println(response);

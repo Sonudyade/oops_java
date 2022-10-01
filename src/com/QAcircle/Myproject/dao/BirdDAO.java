@@ -34,6 +34,12 @@ private ParrotBirdDTO[] parrotbirddto= new ParrotBirdDTO[10];
 	
 	
 }
+	public void print() {
+			for(int i=0;i<parrotbirddto.length;i++) {
+				System.out.println(parrotbidrdto[i].getNamr());
+		}
+			
+	}
 }
 
 	

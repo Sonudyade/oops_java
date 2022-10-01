@@ -37,10 +37,21 @@ public static void main(String[] args) {
 	     String print =dao.deleteDisplay("LED");
 	     System.out.println(print);
 	     
+	     System.out.println(getBrandName());
+	     String getColor = "Black";
+		System.out.println(getColor);
+	    	  
+	      }
+
+private static String getBrandName() {
+
+	return "boat";
+}
+public void print() {
+	String brandName = "boat";
+	System.out.println(brandName);
+}
 	     
 	     
 	    
 	}
-
-
-}

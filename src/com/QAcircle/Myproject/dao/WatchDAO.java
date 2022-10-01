@@ -40,4 +40,16 @@ private SmartWatchDTO[]smartWatches =new SmartWatchDTO[10];
 
 		return "display"+Display +"not present";
 	}
+	
+	public void print() {
+		for(int i= 0; i<smartWatches.length; i++) {
+			System.out.println(smartWatches[i].getBrandName());
+			System.out.println(smartWatches[i].getColor());
+			System.out.println(smartWatches[i].getDisplay());
+			System.out.println(smartWatches[i].getPrice());
+			System.out.println(smartWatches[i].getFeatures());
+		
+		
+	}
+}
 }

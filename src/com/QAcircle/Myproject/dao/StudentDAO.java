@@ -39,4 +39,15 @@ public class StudentDAO {
 	return "Name" +name+ " not  present";
 
 }
+	public void print() {
+		for (int i = 0; i<medicalstudents.length;i++) {
+			System.out.println(medicalstudents[0].getAddress());
+			System.out.println(medicalstudents[0].getAge());
+			System.out.println(medicalstudents[0].getDept());
+			System.out.println(medicalstudents[0].getMoNo());
+			System.out.println(medicalstudents[0].getName());
+			System.out.println(medicalstudents[0].getYear());
+		}
+		
+	}
 }

@@ -55,5 +55,13 @@ private VivoMobileDTO[] VivoMobiles = new VivoMobileDTO[10];
 	
 
 }
+	public void print() {
+		for ( int i=0; i<VivoMobiles.length;i++) {
+			System.out.println(VivoMobiles[0].getBrandName());
+			System.out.println(VivoMobiles[0].getColor());
+			System.out.println(VivoMobiles[0].getPrice());
+		}
+		
+	}
 }
 

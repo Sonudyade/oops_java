@@ -47,4 +47,12 @@ public class LaptopDAO {
 	
 	return "Cost" +cost+ "not present";
 	}
+	public void print() {
+		for(int i=0; i<hplaptopes.length;i++) {
+			System.out.println(hplaptopes[0].getBrandName());
+			System.out.println(hplaptopes[0].getColor());
+			System.out.println(hplaptopes[0].getCost());
+			System.out.println(hplaptopes[0].getFeatures());
+		}
+	}
 }
