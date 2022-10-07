@@ -3,49 +3,48 @@ import com.QAcircle.Myproject.dto.FaceBook;
 
 public class DAo {
 	
-	private static final FaceBook Facebook = null;
-	private static final Object Email = null;
-	FaceBook[] facebook = new FaceBook[1];
 	
 	
-	public  String login(FaceBook app) {
-		int index = 0;
-          facebook[index ++ ]=( Facebook);
-		return ("Login");
-
+	private FaceBook[] facebook = new FaceBook[10];
+	private Object getPassword;
+	public void login(FaceBook app) {
+		facebook[0]=app;
 	}
 	
-	public  String Register(FaceBook app) {
-		for (int i=0; i< facebook.length; i++) {
-			Object email = "sonudyade46@gmail.com";
-			Object password = "Sonu46";;
-			Object getEmail = "sonudyade46@gmail.com";
-			Object getPassword = "Sonu46";
-			if(facebook[i]!= null&&getEmail.equals(email)&& facebook[i]!=null&&getPassword.equals(password)) {
+	
+	public  String loginByEmailpassword(String email, String password) {
+		for(int i =0;i<facebook.length; i++) {
+			if(facebook[i]!=null&&facebook[i].getEmail().equals(email)&&facebook[i]!=null&&getPassword.equals(password)) {
+				facebook[i]=null;
+				return ("facebook login sucess");
 			}
-		
-				else 
-					System.out.println("login sucess");
-				}
-		return ("facebook login sucess");
 		}
-	public String delete(FaceBook app) {
+		return "facebook login fail";
+		
+	}
+	
+	public  String RegisterByName(String name) {
 		for (int i=0; i< facebook.length; i++) {
-			Object email= "sonudyade46@gmail.com";
-			Object password = "Sonu46";
-			Object getEmail = "sonudyade46@gmail.com";
-			Object getPassword = "Sonu46";
-			if(facebook[i]!=null&&getEmail.equals(Email)&& facebook[i].getPassword.equals(password)) {
-				return delete(app);
+			
+			if(facebook[i]!= null&&facebook[i].getName().equals(name)) {
+				facebook[i]=null;
+				return("Register succes");
 			}
-			System.out.println("deleted");
-		
+		}
+		return "Not Register";
 	}
-		return ("delete created account");
 		
-		
-	}
+	public String deleteByEmailpassword(String email, String password) {
+		for(int i =0;i<facebook.length; i++) {
+			if(facebook[i]!=null&&facebook[i].getEmail().equals(email)&&facebook[i]!=null&&getPassword.equals(password)) {
+				facebook[i]=null;
+				return ("facebook delete sucess");
 			}
+		}
+		return "facebook delete fail"; 
+			}
+
+}
 			
 			
 

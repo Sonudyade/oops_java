@@ -1,9 +1,12 @@
+
+
 package com.QAcircle.Myproject.dto;
 import com.QAcircle.Myproject.dao.DAo;
+import com.QAcircle.Myproject.dto.FaceBook;
+
 
 public class TestDetails {
-	private static final Object[] FaceBook = null;
-	private static FaceBook Facebook = null;
+	
 
 	public static void main(String [] args) {
 		FaceBook app = new FaceBook();
@@ -14,32 +17,25 @@ public class TestDetails {
 		app.setEmail("sonudyade46@gmail.com");
 		app.setMoNo(973102506);
 		
+		
 		DAo dao1= new DAo();
 		dao1.login(app);
 		
+		String response=dao1. RegisterByName("Sony");
+		System.out.println(response);
 		
+		String show=dao1. loginByEmailpassword("sonudyade46@gmail.com","Sonu@46");
+		System.out.println(show);
 		
-		DAo dao2= new DAo();
-		dao2.Register(app);
-		
-		DAo dao3= new DAo();
-		dao3.delete(app);
-		
-		String Show = dao1.login(Facebook );
-		System.out.println(Show);
-		
-		
-		String Display = dao2.Register(Facebook );
-		System.out.println(Display);
-		
-		String Print = dao3.delete(Facebook );
-		System.out.println(Print);
+		String print=dao1.deleteByEmailpassword("sonudyade46@gmail.com","Sonu@46");
+		System.out.println(print);
 	}
 		
-		public void print() {
-			for (int i=0; i< Facebook.length; i++) {
-				System.out.println(((Details) FaceBook[1]).getName());
-				System.out.println(((Details) FaceBook[1]).getGender());
+		public void print(){
+			
+			for(int i =0;i<facebook.length(); i++) {
+				System.out.println(facebook[i].getName());
+				System.out.println(facebook[i].getGender());
 			
 			
 	
