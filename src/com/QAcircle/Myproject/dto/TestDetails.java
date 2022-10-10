@@ -30,16 +30,13 @@ public class TestDetails {
 		String print=dao1.deleteByEmailpassword("sonudyade46@gmail.com","Sonu@46");
 		System.out.println(print);
 	}
+	
+
 		
-		public void print(){
-			
-			for(int i =0;i<facebook.length(); i++) {
-				System.out.println(facebook[i].getName());
-				System.out.println(facebook[i].getGender());
-			
+		
 			
 	
-		}
+		
 		
 		
 		
@@ -51,7 +48,5 @@ public class TestDetails {
 		
 		
 	}
-
-}
 
 

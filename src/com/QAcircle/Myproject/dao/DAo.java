@@ -43,8 +43,18 @@ public class DAo {
 		}
 		return "facebook delete fail"; 
 			}
-
-}
+	public void print() {
+		for(int i =0;i<facebook.length; i++) {
+			System.out.println(facebook.getClass());
 			
+			
+	
+		}
+		
+	}
+	
+
+	}
+
 			
 
