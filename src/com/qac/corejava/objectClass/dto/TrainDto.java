@@ -1,37 +1,51 @@
 package com.qac.corejava.objectClass.dto;
 import java.util.ArrayList;
 
-public class TrainDto extends Train  {
-	
-	private int timing;
-	
+ public class TrainDto {
+	private String name;
+	private String origin;
+	private String destination;
+	private int speed;
+	private int cost;
+	  
 	public TrainDto() {
-		System.out.println("calling TrainDto constructor");
+		System.out.println("Invoking Train constructor");
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getOrigin() {
+		return origin;
+	}
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public void setSpeed(int speed) {
+		this.speed= speed;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost ) {
+		this.cost = cost;
+	}
+	@Override
+	public String toString() {
+		return "[Name: "+name+"\t Origin : "+origin+"\t Destination : "+destination+"\t Speed: "+speed+"\t Cost: "+cost+"\t]";
 	
-	public int setTiming() {
-		return timing;
-	}
-	public void setTiming(int timing) {
-		this.timing=timing;
-	}
-
-	public Object getremoveName() {
-		return getremoveName();
-	}
-	public void setremoveName() {
-		this.getremoveName();
-	}
-
-	public Object getAll() {
-		return getAll();
-	}
-	public void setAll() {
-		this.getAll();
-	}
 	
-	
-	
-
 
 }
+ }

@@ -1,4 +1,5 @@
 package com.qac.corejava.objectClass.dao;
+import com.qac.corejava.objectClass.dto.TrainDto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,58 +7,61 @@ import java.util.Scanner;
 import com.qac.corejava.objectClass.dto.TrainDto;
 
 public class TrainDao {
-	String s, name;
-	Scanner r = new Scanner(System.in);
+	
 
-	ArrayList methods = new ArrayList();
+	ArrayList list = new ArrayList();
+	public String save(TrainDto train) {
+		list.add(train);
+		return train.getName()+"data saved";
+	}
 
 	
-	public TrainDto[] traindto = new TrainDto[10]; 
-	
-	public void save(TrainDto train) {
-		traindto[0] = train;
-	}
-	public String getByName(String name) {
-		for(int i=0;i<traindto.length; i++) {
-			if (traindto[i]!=null&&traindto[i].getName().equals(name)) {
-				traindto[i]= null;
-				return"getName"+name;
-			}
-		}
-		return "getName"+name;
-	}
-	public String getByOrigin(String origin) {
-		for(int i=0;i<traindto.length; i++) {
-			if (traindto[i]!=null&&traindto[i].getOrigin().equals(origin)) {
-				traindto[i]= null;
-				return"getOrigin"+origin;
-			}
-		}
-		return "getOrigin"+origin;
-	}
 	
 	
-	public String getAll() {
-		for(int i=0;i<traindto.length; i++) {
-			if (traindto[i]!=null&&traindto[i].getAll().equals(i)) {
-				traindto[i]= null;
-				return"getAll";
+	public ArrayList getByName(String name) {
+		ArrayList nameList = new ArrayList();
+		for(int i=0;i<list.size(); i++) {
+			TrainDto dto = (TrainDto)list.get(i);
+			if (dto.getName().equals(name)) {
+				nameList.add(dto);
 			}
 		}
-		return "getAll";
-			
-		}
-	public String removeByName(String ArrayList) {
-		for(int i=0;i<traindto.length; i++) {
-			if (traindto[i]!=null&&traindto[i].getremoveName().equals(ArrayList)) {
-				traindto[i]= null;
-				return"removeName"+ArrayList;
+		return nameList;
+	}
+	public ArrayList getByOrigin(String origin) {
+		ArrayList nameList = new ArrayList();
+		for(int i=0;i<list.size(); i++) {
+			TrainDto dto = (TrainDto)list.get(i);
+			if (dto.getOrigin().equals(origin)) {
+				nameList.add(dto);
+				
 			}
 		}
-		return "RemoveName"+ArrayList;
+		return nameList;
+	}
+	public ArrayList removeByName(String name) {
+		ArrayList nameList = new ArrayList();
+		for(int i=0;i<list.size(); i++) {
+			TrainDto dto = (TrainDto)list.get(i);
+			if (dto.getName().equals(name)) {
+				nameList.add(dto);
+		
+			}
+		}
+		return nameList;
 	
 		
 	}
+
+
+
+
+	public ArrayList getAll() {
+		return list;
+		
+		
+		
+			}
 		
 	
 
