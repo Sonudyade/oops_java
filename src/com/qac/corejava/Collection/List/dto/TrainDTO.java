@@ -1,14 +1,16 @@
-package com.qac.corejava.objectClass.dto;
-import java.util.ArrayList;
+package com.qac.corejava.Collection.List.dto;
 
- public class TrainDto {
+import java.util.LinkedList;
+
+public class TrainDTO {
+	
 	private String name;
 	private String origin;
 	private String destination;
 	private int speed;
 	private int cost;
 	  
-	public TrainDto() {
+	public TrainDTO() {
 		System.out.println("Invoking Train constructor");
 	}
 	public String getName() {
@@ -49,4 +51,6 @@ import java.util.ArrayList;
 	
 
 }
- }
+}
+	
+	    

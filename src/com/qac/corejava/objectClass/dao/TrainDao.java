@@ -18,7 +18,7 @@ public class TrainDao {
 	
 	
 	
-	public ArrayList getByName(String name) {
+	public String getByName(String name) {
 		ArrayList nameList = new ArrayList();
 		for(int i=0;i<list.size(); i++) {
 			TrainDto dto = (TrainDto)list.get(i);
@@ -26,7 +26,7 @@ public class TrainDao {
 				nameList.add(dto);
 			}
 		}
-		return nameList;
+		return name;
 	}
 	public ArrayList getByOrigin(String origin) {
 		ArrayList nameList = new ArrayList();
@@ -39,7 +39,7 @@ public class TrainDao {
 		}
 		return nameList;
 	}
-	public ArrayList removeByName(String name) {
+	public String removeByName(String name) {
 		ArrayList nameList = new ArrayList();
 		for(int i=0;i<list.size(); i++) {
 			TrainDto dto = (TrainDto)list.get(i);
@@ -48,7 +48,7 @@ public class TrainDao {
 		
 			}
 		}
-		return nameList;
+		return name;
 	
 		
 	}

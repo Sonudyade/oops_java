@@ -32,30 +32,21 @@ public class TestTrain {
 		dao.save(train);
 		dao.save(train1);
 		
-		ArrayList show = dao.getByName("Udhyana Express");
+		String show = dao.getByName("Udhyana Express");
 		System.out.println(show);
-		
-		ArrayList display = dao.getByOrigin("Bidar");
-		System.out.println(display);
-		
-		ArrayList print = dao.removeByName("Udhyana Express");
-		System.out.println(print);
 		
 		ArrayList response = dao.getAll();
 		System.out.println(response);
 		
+		ArrayList display = dao.getByOrigin("Bidar");
+		System.out.println(display);
 		
-		
-	
-		
-		
-		
+		String print = dao.removeByName("Udhyana Express");
+		System.out.println(print);
 		
 		
 	}
-	
-	
-
-	
-
 }
+	
+
+
