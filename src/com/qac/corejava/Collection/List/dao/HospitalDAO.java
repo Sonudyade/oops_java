@@ -8,6 +8,7 @@ import com.qac.corejava.Collection.List.dto.TrainDTO;
 
 public class HospitalDAO {
 	LinkedList list = new LinkedList();
+	private LinkedList remove;
 
 	public String save(HospitalDTO Hospital ) {
 		list.add(Hospital);
@@ -50,7 +51,7 @@ public class HospitalDAO {
 	
 
 	public LinkedList removeAll() {
-		return null;
+		return remove;
 	}
 	}
 

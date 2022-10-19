@@ -7,15 +7,15 @@ import com.qac.corejava.Collection.List.dto.HospitalDTO;
 
 public class BankAccountDtailsDAO {
 	
-	HashSet <String>set = new HashSet<String>();
+	HashSet set = new HashSet();
 	public String save(BankAccountDtailsDTO dto) {
-		set.addAll(set);
+		set.add(dto);
 		return dto.getName()+"data saved";
 	}
 	Object [] bankAccountDtailsDAO=set.toArray();
 	public String SearchByName(String name) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object:bankAccountDtailsDAO){
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getName().equals(name)) {
 				nameSet.add(dto);
@@ -25,7 +25,7 @@ public class BankAccountDtailsDAO {
 	}
 	public long SearchByAccountNumber(long AccountNumber) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object: bankAccountDtailsDAO) {
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getAccountNumber()==(AccountNumber)) {
 				nameSet.add(dto);
@@ -35,7 +35,7 @@ public class BankAccountDtailsDAO {
 	}
 	public String SearchByIFCS(String iFSC) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object:bankAccountDtailsDAO) {
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getiFSC().equals(iFSC)) {
 				nameSet.add(dto);
@@ -45,7 +45,7 @@ public class BankAccountDtailsDAO {
 	}
 	public long removeByAccountNumber(long AccountNumber) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object: bankAccountDtailsDAO) {
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getAccountNumber()==(AccountNumber)) {
 				nameSet.add(dto);
@@ -55,7 +55,7 @@ public class BankAccountDtailsDAO {
 	}
 	public long updateMoNoByAccountNumber(long AccountNumber) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object: bankAccountDtailsDAO) {
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getAccountNumber()==(AccountNumber)) {
 				nameSet.add(dto);
@@ -65,7 +65,7 @@ public class BankAccountDtailsDAO {
 	}
 	public String updateMoNoByName(String name) {
 		HashSet nameSet = new HashSet();
-		for(String object: set) {
+		for(Object object: bankAccountDtailsDAO) {
 			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
 			if (dto.getName().equals(name)) {
 				nameSet.add(dto);
