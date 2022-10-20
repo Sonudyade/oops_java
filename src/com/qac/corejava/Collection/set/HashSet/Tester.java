@@ -21,29 +21,27 @@ public class Tester {
 		
 		dao.save(dto);
 		
-		String show = dao.SearchByName("Sony");
+		BankAccountDtailsDTO show = dao.SearchByName("Sony");
 		System.out.println(show);
 		
-		String display =dao.SearchByIFCS("CNRB000333");
+		BankAccountDtailsDTO display =dao.SearchByIFCS("CNRB000333");
 		System.out.println(display);
 		
-		long print = dao.SearchByAccountNumber(567834579);
+		BankAccountDtailsDTO print = dao.SearchByAccountNumber(567834579);
 		System.out.println(print);
 		
-		long response=dao.removeByAccountNumber(567834579);
+		BankAccountDtailsDTO response=dao.removeByAccountNumber(567834579);
 		System.out.println(response);
 		
-		long use =dao.updateMoNoByAccountNumber(567834579);
+		BankAccountDtailsDTO use =dao.updateMoNoByAccountNumber(998456789,567834579);
 		System.out.println(use);
 		
-		String shows=dao.updateMoNoByName("Sony");
+		BankAccountDtailsDTO shows=dao.updateMoNoByName(567834579 ,"Sony");
 		System.out.println(shows);
 		
-		System.out.println(dto);
-		System.out.println(dao);
-		
-		
+		}
+
 		
 	}
 
-}
+

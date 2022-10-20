@@ -7,71 +7,80 @@ import com.qac.corejava.Collection.List.dto.HospitalDTO;
 
 public class BankAccountDtailsDAO {
 	
-	HashSet set = new HashSet();
+	HashSet<BankAccountDtailsDTO> set = new HashSet<BankAccountDtailsDTO>();
+	private long moNo;
 	public String save(BankAccountDtailsDTO dto) {
 		set.add(dto);
 		return dto.getName()+"data saved";
 	}
-	Object [] bankAccountDtailsDAO=set.toArray();
-	public String SearchByName(String name) {
-		HashSet nameSet = new HashSet();
-		for(Object object:bankAccountDtailsDAO){
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getName().equals(name)) {
-				nameSet.add(dto);
+	
+	public BankAccountDtailsDTO SearchByName(String name) {
+		
+		for( BankAccountDtailsDTO object:set){
+			if (object.getName().equals(name)) {
+				return object;
 			}
 		}
-		return name;
+		return null;
 	}
-	public long SearchByAccountNumber(long AccountNumber) {
-		HashSet nameSet = new HashSet();
-		for(Object object: bankAccountDtailsDAO) {
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getAccountNumber()==(AccountNumber)) {
-				nameSet.add(dto);
+	public BankAccountDtailsDTO SearchByAccountNumber(long AccountNumber) {
+		
+		for(BankAccountDtailsDTO object: set) {
+			if (object.getAccountNumber()==(AccountNumber)) {
+				return object;
 			}
 		}
-		return AccountNumber;
+		return null;
 	}
-	public String SearchByIFCS(String iFSC) {
-		HashSet nameSet = new HashSet();
-		for(Object object:bankAccountDtailsDAO) {
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getiFSC().equals(iFSC)) {
-				nameSet.add(dto);
+	public BankAccountDtailsDTO SearchByIFCS(String iFSC) {
+		for(BankAccountDtailsDTO object:set) {
+			if (object.getiFSC().equals(iFSC)) {
+				return object;
 			}
 		}
-		return iFSC;
+		return null
+				
+				;
 	}
-	public long removeByAccountNumber(long AccountNumber) {
-		HashSet nameSet = new HashSet();
-		for(Object object: bankAccountDtailsDAO) {
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getAccountNumber()==(AccountNumber)) {
-				nameSet.add(dto);
+	public BankAccountDtailsDTO removeByAccountNumber(long AccountNumber) {
+		for(BankAccountDtailsDTO object: set) {
+			if (object.getAccountNumber()==(AccountNumber)) {
+				return object;
+	
 			}
 		}
-		return AccountNumber;
+		return null;
 	}
-	public long updateMoNoByAccountNumber(long AccountNumber) {
-		HashSet nameSet = new HashSet();
-		for(Object object: bankAccountDtailsDAO) {
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getAccountNumber()==(AccountNumber)) {
-				nameSet.add(dto);
+	public BankAccountDtailsDTO updateMoNoByAccountNumber(long moNo, long AccountNumber ) {
+		for(BankAccountDtailsDTO object: set) {
+			if (object.getAccountNumber()==(AccountNumber)) {
+				object.setMoNo(moNo);
+				return object;
 			}
 		}
-		return AccountNumber;
+		return null;
 	}
-	public String updateMoNoByName(String name) {
-		HashSet nameSet = new HashSet();
-		for(Object object: bankAccountDtailsDAO) {
-			BankAccountDtailsDTO dto = (BankAccountDtailsDTO)set.clone();
-			if (dto.getName().equals(name)) {
-				nameSet.add(dto);
+	public BankAccountDtailsDTO updateMoNoByName(long moNo,String name) {
+		for(BankAccountDtailsDTO object: set) {
+			if (object.getName().equals(name)) {
+				object.setName(name);
+				return object;
 			}
 		}
-		return name;
+		return null;
+	}
+	public void printin(BankAccountDtailsDTO Object) {
+		for(BankAccountDtailsDTO object: set) {
+		System.out.println(object.getName());
+		System.out.println(object.getAccountNumber());
+		System.out.println(object.getMoNo());
+		System.out.println(object.getiFSC());
+		System.out.println(object.getEmailID());
+		System.out.println(object.getDOB());
+		System.out.println(object.getAddress());
+		System.out.println(object.getOccupation());
+
+
 	
 	
 	
@@ -83,4 +92,5 @@ public class BankAccountDtailsDAO {
 
 
 }
+	}
 }

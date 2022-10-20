@@ -75,6 +75,14 @@ public class BankAccountDtailsDTO {
 	public void setOccupation(String occupation) {
 		this.occupation=occupation;
 	}
+	@Override
+	public String toString() {
+		return "[Name: "+name+"\t AccountNumber : "+accountNumber+"\t MoNo : "+moNo+"\t iFSC : "+iFSC+"\t EmailID : "+emailID+"\t DOB: "+DOB+"\t Address: "+address+"\t Occupation:"+occupation+"\"]";
+	
+	
+	
+	
     
 
+}
 }
