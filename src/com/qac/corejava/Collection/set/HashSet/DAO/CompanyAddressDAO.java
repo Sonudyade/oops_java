@@ -47,15 +47,8 @@ public class CompanyAddressDAO {
 		}
 		return null;
 	}
-	public CompanyDto searchByzipcode(int zipcode) {
-		for(CompanyDto object:com) {
-			if(object.getZipcode().equals(zipcode)) {
-				return object;
-			}
 	
 	}
-		return null;
-	}
-}
+
 
 
