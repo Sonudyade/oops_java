@@ -8,7 +8,6 @@ import com.qac.corejava.Collection.List.dto.HospitalDTO;
 public class BankAccountDtailsDAO {
 	
 	HashSet<BankAccountDtailsDTO> set = new HashSet<BankAccountDtailsDTO>();
-	private long moNo;
 	public String save(BankAccountDtailsDTO dto) {
 		set.add(dto);
 		return dto.getName()+"data saved";
